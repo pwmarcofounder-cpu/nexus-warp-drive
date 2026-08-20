@@ -8,6 +8,9 @@ const REPLACEMENTS: Array<[string, string]> = [
     "https://i.ibb.co/3ykY8VZY/photo-6066420858273600154-x.jpg",
   ],
   ["https://t.me/official_marco_22", "https://t.me/PWNexuss"],
+  // Bare telegram handles used by the site config/API
+  ["official_marco_22", "PWNexuss"],
+  ["officialmarco22", "PWNexuss"],
 ];
 
 const HOP_BY_HOP = new Set([
