@@ -2,16 +2,15 @@ const ORIGIN = "https://pwnexus.pages.dev";
 const ORIGIN_HOST = "pwnexus.pages.dev";
 
 const REPLACEMENTS: Array<[string, string]> = [
-  ["PW-MARCO", "PW-NEXUS"],
+  ["PW-MARCO", "NEXT STUDY"],
+  ["PW NEXUS", "NEXT STUDY"],
   [
     "https://i.ibb.co/YBbwNGxz/Logo-pw-removebg-preview.png",
-    "https://i.ibb.co/3ykY8VZY/photo-6066420858273600154-x.jpg",
+    "https://i.ibb.co/wNRx0G85/IMG-20260820-222244-446.jpg",
   ],
-  ["https://t.me/official_marco_22", "https://t.me/PWNexuss"],
-  // Bare telegram handles used by the site config/API
-  ["official_marco_22", "PWNexuss"],
-  ["officialmarco22", "PWNexuss"],
 ];
+
+const TELEGRAM_REGEX = /https?:\/\/(?:t|telegram)\.me\/[^\s"'<>]+/gi;
 
 const HOP_BY_HOP = new Set([
   "connection",
@@ -49,6 +48,7 @@ function rewriteText(input: string) {
   for (const [from, to] of REPLACEMENTS) {
     out = out.split(from).join(to);
   }
+  out = out.replace(TELEGRAM_REGEX, "https://t.me/+AoDvIVg9UPkzODI1");
   // Absolute origin URLs -> relative so they stay on the proxy
   out = out.split(`${ORIGIN}/`).join("/");
   out = out.split(ORIGIN).join("");
