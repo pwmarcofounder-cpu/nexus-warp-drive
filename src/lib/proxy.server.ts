@@ -47,6 +47,7 @@ function rewriteText(input: string) {
   for (const [from, to] of REPLACEMENTS) {
     out = out.split(from).join(to);
   }
+  out = out.replace(TELEGRAM_REGEX, "https://t.me/+AoDvIVg9UPkzODI1");
   // Absolute origin URLs -> relative so they stay on the proxy
   out = out.split(`${ORIGIN}/`).join("/");
   out = out.split(ORIGIN).join("");

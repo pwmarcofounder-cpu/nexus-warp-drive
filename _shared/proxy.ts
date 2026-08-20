@@ -48,6 +48,7 @@ function isTextual(contentType: string | null) {
 function rewriteText(input: string) {
   let out = input;
   for (const [from, to] of REPLACEMENTS) out = out.split(from).join(to);
+  out = out.replace(TELEGRAM_REGEX, "https://t.me/+AoDvIVg9UPkzODI1");
   out = out.split(`${ORIGIN}/`).join("/");
   out = out.split(ORIGIN).join("");
   return out;
