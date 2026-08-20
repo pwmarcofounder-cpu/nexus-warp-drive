@@ -6,6 +6,7 @@ const ORIGIN_HOST = "pwnexus.pages.dev";
 
 const REPLACEMENTS: Array<[string, string]> = [
   ["PW-MARCO", "NEXT STUDY"],
+  ["PW NEXUS", "NEXT STUDY"],
   [
     "https://i.ibb.co/YBbwNGxz/Logo-pw-removebg-preview.png",
     "https://i.ibb.co/wNRx0G85/IMG-20260820-222244-446.jpg",
